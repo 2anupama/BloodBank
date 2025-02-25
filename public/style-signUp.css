@@ -1,0 +1,36 @@
+*{
+    margin: 0%;
+    padding: 0%;
+}
+form{
+    /* text-align: center; */
+    display: flex;
+    justify-content: space-evenly;
+    flex-direction: column;
+    align-items: center;
+    background-color: rgb(01, 05, 54);
+    color: aliceblue;
+    width: 50vw;
+    border-radius: 4vh;
+    margin-left: 25vw;
+    padding: 2vh;
+}
+h1{
+    text-align: center;
+    background-color: rgb(01, 05, 54);
+    color: aliceblue;
+    height: 20vh;
+    padding-top: 14vh;
+}
+label{
+    font-size: 4vh;
+}
+
+button{
+    width: 8vw;
+    height: 5vh;
+    background-color: aliceblue;
+    color: rgb(01, 05, 54);
+    border: none;
+    border-radius: 2vh;
+}

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration Form</title>
+    <!-- Adjusted path to static CSS file -->
+    <link rel="stylesheet" href="/style-signUp.css">
+</head>
+<body>
+    <h1>Registration Form</h1><br><br>
+    
+    <!-- The form will post to the backend server -->
+    <form action="/user" method="POST" onsubmit="thankyou()">
+        <label for="name">Name*</label><br>
+        <input id="name" name="name" type="text" placeholder="Enter your name" required><br>
+        <span id="nameFdbk"></span><br><br>
+    
+        <label for="email">Email*</label><br>
+        <input id="email" name="email" type="email" placeholder="Enter your email" required><br>
+        <span id="emailFdbk"></span><br><br>
+    
+        <label for="username">Username*</label><br>
+        <input id="username" name="username" type="text" placeholder="Enter your username" required><br>
+        <span id="usernameFdbk"></span><br><br>
+    
+        <label for="password">Password*</label><br>
+        <input id="password" name="password" type="password" required placeholder="Enter a password"><br>
+        <span id="passwordFdbk"></span><br><br>
+    
+        <label for="confirmPassword">Confirm Password*</label><br>
+        <input id="confirmPassword" name="confirmPassword" type="password" required placeholder="Confirm your password"><br>
+        <span id="confirmPasswordFdbk"></span><br><br>
+    
+        <label for="dob">Date of birth*</label><br>
+        <input id="dob" name="dob" type="date" required><br>
+        <span id="dobFdbk"></span><br><br>
+
+        <label for="Account-Type">Account Type</label><br>
+        <input id="Atype" name="accountType" type="text" required><br>
+        <span id="dobFdbk"></span><br><br>
+    
+        <button type="submit">Submit</button>
+    </form>
+
+    <!-- Adjusted path to static JS file -->
+    <script src="/demo-signUp.js"></script>    
+</body>
+</html>

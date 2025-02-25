@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blood Transfusion Request Form</title>
+    <style>
+        body {
+    font-family: Arial, sans-serif;
+    background-color: #f7f7f7;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    width: 50%;
+    margin: 50px auto;
+    background: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+    text-align: center;
+    color: #3498db;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+label {
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+input, select, textarea {
+    margin-bottom: 15px;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+input[type="checkbox"] {
+    margin-right: 10px;
+}
+
+button {
+    padding: 10px;
+    background-color: #3498db;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #2980b9;
+}
+
+#resultMessage {
+    margin-top: 20px;
+    text-align: center;
+    font-size: 18px;
+}
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Blood Transfusion Request Form</h1>
+        <form id="transfusionForm">
+            <label for="patientName">Patient Name:</label>
+            <input type="text" id="patientName" name="patientName" placeholder="Enter patient name" required>
+
+            <label for="patientBloodType">Patient Blood Type:</label>
+            <select id="patientBloodType" name="patientBloodType" required>
+                <option value="">--Select Blood Type--</option>
+                <option value="A+">A+</option>
+                <option value="A-">A-</option>
+                <option value="B+">B+</option>
+                <option value="B-">B-</option>
+                <option value="O+">O+</option>
+                <option value="O-">O-</option>
+                <option value="AB+">AB+</option>
+                <option value="AB-">AB-</option>
+            </select>
+
+            <label for="transfusionDate">Transfusion Date:</label>
+            <input type="date" id="transfusionDate" name="transfusionDate" required>
+
+            <label for="reason">Reason for Transfusion:</label>
+            <textarea id="reason" name="reason" rows="4" placeholder="Enter reason for transfusion" required></textarea>
+
+            <label for="doctorConsent">
+                <input type="checkbox" id="doctorConsent" name="doctorConsent" required>
+                Doctor's consent obtained
+            </label>
+
+            <button type="submit">Submit Request</button>
+        </form>
+
+        <div id="resultMessage"></div>
+    </div>
+
+    <script>
+        document.getElementById('transfusionForm').addEventListener('submit', function(event) {
+    event.preventDefault();
+
+    const patientName = document.getElementById('patientName').value;
+    const patientBloodType = document.getElementById('patientBloodType').value;
+    const transfusionDate = document.getElementById('transfusionDate').value;
+    const reason = document.getElementById('reason').value;
+    const doctorConsent = document.getElementById('doctorConsent').checked;
+
+    const currentDate = new Date();
+    const selectedTransfusionDate = new Date(transfusionDate);
+
+    // Validation: Transfusion date should be today or a future date
+    if (selectedTransfusionDate < currentDate.setHours(0, 0, 0, 0)) {
+        document.getElementById('resultMessage').textContent = 
+            'Transfusion date cannot be in the past. Please select a valid date.';
+        document.getElementById('resultMessage').style.color = 'red';
+        return;
+    }
+
+    // Validation: Ensure doctor's consent is obtained
+    if (!doctorConsent) {
+        document.getElementById('resultMessage').textContent = 
+            'Doctor\'s consent is required to proceed with the transfusion request.';
+        document.getElementById('resultMessage').style.color = 'red';
+        return;
+    }
+
+    // If all validations pass
+    document.getElementById('resultMessage').textContent = 
+        `Blood transfusion request for ${patientName} has been submitted successfully!`;
+    document.getElementById('resultMessage').style.color = 'green';
+});
+
+    </script>
+</body>
+</html>

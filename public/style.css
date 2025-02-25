@@ -1,0 +1,191 @@
+*{
+    margin: 0%;
+    padding: 0%;
+}
+#logoBg{
+    text-align: center;
+    background-color: rgb(01, 05, 54);
+    position: relative;
+    top: 0px;
+    z-index: 100;
+}
+#logoBg img{
+    height: 40vh;
+    /* width: 7vh; */
+}
+.navBar ul{
+    list-style-type: none;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    font-size: 3.2vh;
+    color: aliceblue;
+    padding-top: 0.8vh;
+}
+.navBar ul li a{
+    text-decoration: none;
+    color: aliceblue;
+}
+.navBar ul li a:hover{
+    text-decoration: underline;
+}
+.navBar{
+    background-color: rgb(207, 207, 36);
+    height: 5vh;
+    position: relative;
+    bottom: 2vh;
+    /* top: 40vh; */
+    z-index: 100;
+}
+.homePage{
+    display: flex;
+    align-items: center;
+}
+.homeSec1::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('./Assets/homesec1.jpg');
+    background-size: cover;
+    opacity: 0.5; /* Opacity only for the background image */
+    z-index: -1; /* Place behind the content */
+}
+.homeSec1 p{
+    z-index: 1;
+    width: 50%;
+    font-size: 3vh;
+}
+.homeSec1{
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    padding-top: 15vh;
+}
+.homeSec1 h3{
+    font-size: 5vh;
+}
+.aboutUs{
+    position:relative;
+    top: 20vh;
+    text-align: center;
+}
+.visionList,.missionList{
+    list-style-type:none;
+    line-height: 2;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.teamMem img{
+    height: 30vh;
+    width: 20vw;
+    border-radius: 10px;
+}
+.team{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+.history{
+    position: relative;
+    top: 25vh;
+}
+.history h1{
+    text-align: center;
+}
+.historySec1, .historySec2, .historySec3{
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+.history p{
+    width: 50%;
+    padding: 4vh;
+}
+.history img{
+    width: 48vw;
+    height: 50vh;
+}
+.careers{
+    position: relative;
+    top: 30vh;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.careers input{
+    width: 20vw;
+}
+.careers select{
+    width: 20vw;
+}
+.careers form{
+    width: 35vw;
+    height: 80vh;
+    color: aliceblue;
+    background-color: rgb(01, 05, 54);
+    padding: 8vh;
+    border-radius: 20px;
+}
+.careers form button{
+    height: 5vh;
+    width: 5vw;
+    background-color: rgb(207, 207, 36);
+    border: none;
+    border-radius: 10px;
+    color: aliceblue;
+}
+.contactUs{
+    position: relative;
+    top: 45vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+footer{
+    position: relative;
+    top: 55vh;
+    background-color: rgb(207,207,36);
+    height: 20vh;
+    display: flex;
+    align-items: center;
+    color: aliceblue;
+}
+footer p{
+    padding-left: 45vw;
+}
+#map {
+    height: 500px; /* Or any specific height you prefer */
+    width: 70%;
+    margin: 0 auto; /* Center the map horizontally */
+    position: relative;
+    top: 60vh; /* Adjust as needed */
+    z-index: -1;
+}
+.visMis{
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+#memImg1,#memImg2,#memImg3{
+    height: 60vh;
+    width: 30vw;
+}
+.directionBut a{
+    color: aliceblue;
+    text-decoration: none;
+}
+.directionBut{
+    background-color: rgb(01, 05, 54);
+    border: none;
+    border-radius: 10px;
+    height: 8vh;
+    width: 12vw;
+    position: relative;
+    top: 65vh;
+    left: 45vw;
+}
